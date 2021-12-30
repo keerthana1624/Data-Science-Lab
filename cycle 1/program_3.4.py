@@ -1,13 +1,12 @@
 import matplotlib.pyplot as plt
-x = []
-y = []
-for line in open('sample.txt', 'r'):
-  lines = [i for i in line.split()]
-  x.append(lines[0])
-  y.append(int(lines[1]))
-plt.title(" Mark Analysis")
-plt.xlabel('Roll Number')
-plt.ylabel('Marks')
-plt.yticks(y)
-plt.plot(x, y, marker = 'o', c = 'g')
+x1=[100,250,300]
+y1=[250,100,250]
+plt.plot(x1,y1,label="Line1")
+x2=[100,200,300]
+y2=[100,300,250]
+plt.plot(x2,y2,label="Line2")
+plt.xlabel('x-axis')
+plt.ylabel('y-axis')
+plt.title('Two or more lines on same plot')
+plt.legend()
 plt.show()
