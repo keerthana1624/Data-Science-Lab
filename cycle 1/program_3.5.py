@@ -1,13 +1,13 @@
 import matplotlib.pyplot as plt
-x = []
-y = []
-for line in open('sample.txt', 'r'):
-  lines = [i for i in line.split()]
-  x.append(lines[0])
-  y.append(int(lines[1]))
-plt.title(" Mark Analysis")
-plt.xlabel('Roll Number')
-plt.ylabel('Marks')
-plt.yticks(y)
-plt.plot(x, y, marker = 'o', c = 'g')
+import numpy as np
+x=np.arange(0,5,0.01)
+plt.subplot(3,1,1)
+plt.title('sin')
+plt.plot(x,np.sin(x))
+plt.subplot(3,1,2)
+plt.title('cos')
+plt.plot(x,np.cos(x))
+plt.subplot(3,1,3)
+plt.title('straight')
+plt.plot(x,x)
 plt.show()
